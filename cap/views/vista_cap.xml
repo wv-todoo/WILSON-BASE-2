@@ -1,28 +1,40 @@
 <odoo>
   <data>
+      
+   
+      
+      
     <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="cap.list">
-      <field name="name">CAP list</field>
-      <field name="model">cap.cap</field>
+
+    <record model="ir.ui.view" id="VISTA CAP WILSON">
+      <field name="name">para ver</field>
+      <field name="model">wilson.vargas</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="nombre"/>
+          <field name="apellido"/>
+          <field name="monto"/>
+          <field name="detalle"/>
+          <field name="state"/>
         </tree>
       </field>
     </record>
--->
+
 
     <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="cap.action_window">
-      <field name="name">CAP window</field>
-      <field name="res_model">cap.cap</field>
-      <field name="view_mode">tree,form</field>
+
+    <record model="ir.actions.act_window" id="VISTA CAP WILSON">
+      <field name="name">CAP VENTANA</field>
+      <field name="res_model">wilson.vargas</field>
+      <field name="view_mode">tree,form,kanban</field>
     </record>
--->
+
+    <menuitem name = "Capacitacion" id="cap_main"/>
+      <menuitem id="menu_cap"
+                parent="cap_main"
+                action="VISTA CAP WILSON"
+                name="capacitacion"/>
+
 
     <!-- server action to the one above -->
 <!--
@@ -56,5 +68,6 @@
     <menuitem name="Server to list" id="cap" parent="cap.menu_2"
               action="cap.action_server"/>
 -->
+     
   </data>
 </odoo>

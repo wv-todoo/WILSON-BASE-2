@@ -1,0 +1,73 @@
+<odoo>
+  <data>
+      
+   
+      
+      
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="VISTA CAP WILSON">
+      <field name="name">para ver</field>
+      <field name="model">wilson.vargas</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="apellido"/>
+          <field name="monto"/>
+          <field name="detalle"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="VISTA CAP WILSON">
+      <field name="name">CAP VENTANA</field>
+      <field name="res_model">wilson.vargas</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem name = "Capacitacion" id="cap_main"/>
+      <menuitem id="menu_cap"
+                parent="cap_main"
+                action="VISTA CAP WILSON"
+                name="capacitacion"/>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="cap.action_server">
+      <field name="name">CAP server</field>
+      <field name="model_id" ref="model_cap_cap"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="CAP" id="cap.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="cap.menu_1" parent="cap.menu_root"/>
+    <menuitem name="Menu 2" id="cap.menu_2" parent="cap.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="cap.menu_1_list" parent="cap.menu_1"
+              action="cap.action_window"/>
+    <menuitem name="Server to list" id="cap" parent="cap.menu_2"
+              action="cap.action_server"/>
+-->
+     
+  </data>
+</odoo>
