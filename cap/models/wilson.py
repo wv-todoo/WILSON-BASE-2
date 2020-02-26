@@ -2,18 +2,17 @@
 
 from odoo import models, fields
 
-
 class wilson(models.Model):
-     _name = 'wilson.vargas'
-     _description = 'esta es la segunda base cap'
+    _name = 'wilson.vargas'
+    _description = 'esta es la segunda base cap'
 
-     nombre = fields.Char()
-     apellido = fields.Char()
-     monto = fields.Integer()
-     #otro monto = fields.Float(compute="_value_pc", store=True)
-     detalle = fields.Text()
+    nombre = fields.Char()
+    apellido = fields.Char()
+    monto = fields.Integer()
+    #otro monto = fields.Float(compute="_value_pc", store=True)
+    detalle = fields.Text()
         
-    state = fields.Selection(selection=[
+    statex = fields.Selection(selection=[
         ('draft', 'New'),
         ('approve', 'Approved'),
         ('confirm', 'Confirmed'),

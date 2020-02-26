@@ -1,11 +1,6 @@
 <odoo>
-  <data>
-      
-   
-      
-      
+  <data>    
     <!-- explicit list view definition -->
-
     <record model="ir.ui.view" id="VISTA CAP WILSON">
       <field name="name">para ver</field>
       <field name="model">wilson.vargas</field>
